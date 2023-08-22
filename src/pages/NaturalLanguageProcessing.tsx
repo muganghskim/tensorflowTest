@@ -149,18 +149,92 @@ const NaturalLanguageProcessing: React.FC = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: "sans-serif",
+        textAlign: "center",
+        paddingTop: "20px"
+      }}
+    >
       <h1>간단한 자연어 처리 모델</h1>
-      <button onClick={createModel}>모델 생성</button>
-      <button onClick={trainModel}>모델 학습</button>
+      <div>
+        <button
+          onClick={createModel}
+          style={{
+            background: "#4CAF50",
+            border: "none",
+            color: "white",
+            padding: "15px 32px",
+            textAlign: "center",
+            textDecoration: "none",
+            display: "inline-block",
+            fontSize: "16px",
+            margin: "4px 10px",
+            borderRadius: "12px"
+          }}
+        >
+          모델 생성
+        </button>
+        <button
+          onClick={trainModel}
+          style={{
+            background: "#2196F3",
+            border: "none",
+            color: "white",
+            padding: "15px 32px",
+            textAlign: "center",
+            textDecoration: "none",
+            display: "inline-block",
+            fontSize: "16px",
+            margin: "4px 10px",
+            borderRadius: "12px"
+          }}
+        >
+          모델 학습
+        </button>
+      </div>
       <br />
-      <input
-        type="text"
-        onChange={(e) => setText(e.target.value)}
-        value={text}
-      />
-      <button onClick={() => predict(text)}>예측하기</button>
-      <div>답변: {answer}</div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center"
+        }}
+      >
+        <input
+          type="text"
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+          style={{
+            padding: "12px 20px",
+            margin: "8px 0",
+            boxSizing: "border-box",
+            borderRadius: "4px",
+            width: "50%"
+          }}
+        />
+      </div>
+      <br />
+      <button
+        onClick={() => predict(text)}
+        style={{
+          background: "#008CBA",
+          border: "none",
+          color: "white",
+          padding: "15px 32px",
+          textAlign: "center",
+          textDecoration: "none",
+          display: "inline-block",
+          fontSize: "16px",
+          margin: "4px 10px",
+          borderRadius: "12px"
+        }}
+      >
+        예측하기
+      </button>
+      <div style={{ fontSize: "20px", marginTop: "20px" }}>
+        <strong>답변:</strong> <span>{answer}</span>
+      </div>
     </div>
   );
 };
