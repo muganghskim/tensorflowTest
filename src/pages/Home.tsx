@@ -15,9 +15,9 @@ const Home: React.FC = () => {
           </a>
         </li>
         <li>
-          <a href="/sentiment-analysis" className="ml-link">
+          <a href="/NaturalLanguageProcessing" className="ml-link">
             <div>
-              <h2>감성 분석</h2>
+              <h2>자연어 처리</h2>
               <p>텍스트의 감정을 분석하십시오.</p>
             </div>
           </a>
